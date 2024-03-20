@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp"
+        android:background="@color/black"
+        tools:context=".EsborrarReserva">
+
+    <TextView
+            android:id="@+id/textViewTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Esborra reserva"
+            android:textColor="@color/white"
+            android:textSize="46sp"
+            android:textStyle="bold"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="72dp"/>
+
+    <EditText
+            android:id="@+id/editTextDNI"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="25sp"
+            android:hint="DNI"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            android:layout_below="@id/textViewTitle"
+            android:layout_marginTop="62dp"/>
+
+    <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_below="@id/editTextDNI"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="32dp">
+
+        <Button
+                android:id="@+id/buttonInici"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Inici"
+                android:textSize="30sp"
+                android:background="#00ffcc"
+                android:layout_marginRight="20dp"
+                android:onClick="goToMainActivity"/>
+
+        <Button
+                android:id="@+id/buttonEsborrar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Escorra"
+                android:textSize="30sp"
+                android:background="@drawable/button_background"
+                android:onClick="goToCrearReservaActivity"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

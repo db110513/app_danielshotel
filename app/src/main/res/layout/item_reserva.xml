@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- item_reserva.xml -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/black"
+        android:orientation="vertical">
+
+    <TextView
+            android:id="@+id/textViewDNI"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="DNI: "
+            android:textStyle="bold"/>
+
+    <TextView
+            android:id="@+id/textViewNom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nom: "/>
+
+    <TextView
+            android:id="@+id/textViewPreu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Preu: "/>
+
+</LinearLayout>

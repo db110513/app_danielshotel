@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp"
+        android:background="@color/black"
+        tools:context=".CrearReserva">
+
+    <TextView
+            android:id="@+id/textViewTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Crear Reserva"
+            android:textColor="@color/white"
+            android:textSize="54sp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="72dp"/>
+
+    <EditText
+            android:id="@+id/editTextDNI"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:textSize="25sp"
+            android:layout_marginLeft="20dp"
+            android:hint="DNI"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            android:layout_below="@id/textViewTitle"
+            android:layout_marginTop="82dp"/>
+
+    <EditText
+            android:id="@+id/editTextNom"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:textSize="25sp"
+            android:hint="Nom del client"
+            android:layout_marginLeft="20dp"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            android:layout_below="@id/editTextDNI"
+            android:layout_marginTop="16dp"/>
+
+    <EditText
+            android:id="@+id/editTextPreu"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:layout_marginLeft="20dp"
+            android:textSize="25sp"
+            android:hint="Preu"
+            android:textColorHint="@color/white"
+            android:layout_below="@id/editTextNom"
+            android:layout_marginTop="16dp"/>
+
+    <EditText
+            android:id="@+id/editTextDestinacio"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:layout_marginLeft="20dp"
+            android:textSize="25sp"
+            android:hint="Destinació"
+            android:textColorHint="@color/white"
+            android:layout_below="@id/editTextPreu"
+            android:layout_marginTop="16dp"/>
+
+    <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_below="@id/editTextDestinacio"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="52dp">
+
+        <Button
+                android:id="@+id/buttonInici"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Inici"
+                android:textSize="30sp"
+                android:layout_marginRight="20dp"
+                android:onClick="goToMainActivity"/>
+
+        <Button
+                android:id="@+id/buttonCrearReserva"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Crea"
+                android:textSize="30sp"
+                android:onClick="goToCrearReservaActivity"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

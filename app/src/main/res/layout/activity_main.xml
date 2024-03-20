@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000"
+    tools:context=".MainActivity">
+
+    <android.widget.TextView
+        android:id="@+id/textViewWelcome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="  Benvingut a \nDaniels Hotel"
+        android:textSize="64sp"
+        android:paddingTop="50dp"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="32dp"
+        android:textColor="#FFFFFF"/>
+
+
+    <Button
+            android:id="@+id/buttonCrearReserva"
+            android:layout_width="260dp"
+            android:layout_height="wrap_content"
+            android:textSize="25dp"
+            android:text="Crea reserva"
+            android:layout_below="@id/textViewWelcome"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/white"
+            android:layout_marginTop="76dp"/>
+
+    <Button
+            android:id="@+id/buttonMostrar"
+            android:layout_width="260dp"
+            android:layout_height="wrap_content"
+            android:textSize="25dp"
+            android:text="Mostra ocupació"
+            android:layout_below="@id/buttonCrearReserva"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/white"
+            android:layout_marginTop="16dp"/>
+
+    <Button
+            android:id="@+id/buttonModificarReserva"
+            android:layout_width="260dp"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:text="Actualitza reserva"
+            android:textSize="25dp"
+            android:layout_below="@id/buttonMostrar"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="16dp"/>
+
+    <Button
+            android:id="@+id/buttonEsborrarReserva"
+            android:layout_width="260dp"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:text="Esborra reserva"
+            android:textSize="25dp"
+            android:layout_below="@id/buttonModificarReserva"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="16dp"/>
+
+    <Button
+            android:id="@+id/buttonSortir"
+            android:layout_width="260dp"
+            android:layout_height="wrap_content"
+            android:textSize="25dp"
+            android:text="Sortir"
+            android:textColor="@color/white"
+            android:layout_below="@id/buttonEsborrarReserva"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="16dp"/>
+
+
+</RelativeLayout>

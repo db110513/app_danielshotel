@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp"
+        android:background="@color/black"
+        tools:context=".MostrarReserves">
+
+    <TextView
+            android:id="@+id/textViewTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Mostra Reserves"
+            android:textColor="@color/white"
+            android:textSize="46sp"
+            android:textStyle="bold"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="72dp"/>
+
+    <ListView
+            android:id="@+id/listViewReserves"
+            android:layout_width="match_parent"
+            android:layout_height="370dp"
+            android:layout_below="@id/textViewTitle"
+            android:layout_marginTop="62dp"
+            android:textColor="@color/white"
+            android:divider="@null"
+            android:dividerHeight="0dp"/>
+
+    <Button
+            android:id="@+id/buttonInici"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Inici"
+            android:textSize="30sp"
+            android:textColor="@color/white"
+            android:layout_below="@id/listViewReserves"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="32dp"/>
+
+
+</RelativeLayout>

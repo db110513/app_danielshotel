@@ -1,0 +1,6 @@
+<!-- button_background.xml -->
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_pressed="true" android:drawable="@color/blue" /> <!-- Color cuando el botón está presionado -->
+    <item android:state_enabled="true" android:drawable="@color/blue" /> <!-- Color normal del botón -->
+    <item android:drawable="@android:color/transparent" /> <!-- Color transparente cuando el botón no está presionado -->
+</selector>
