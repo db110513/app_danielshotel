@@ -12,7 +12,7 @@
             android:id="@+id/textViewTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Crear Reserva"
+            android:text="Crea Reserva"
             android:textColor="@color/white"
             android:textSize="54sp"
             android:layout_centerHorizontal="true"
@@ -80,16 +80,16 @@
                 android:layout_height="wrap_content"
                 android:text="Inici"
                 android:textSize="30sp"
-                android:layout_marginRight="20dp"
-                android:onClick="goToMainActivity"/>
+                android:background="#FFFFFF"
+                android:layout_marginRight="20dp"/>
 
         <Button
                 android:id="@+id/buttonCrearReserva"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Crea"
-                android:textSize="30sp"
-                android:onClick="goToCrearReservaActivity"/>
+                android:background="#FFFFFF"
+                android:textSize="30dp"/>
 
     </LinearLayout>
 

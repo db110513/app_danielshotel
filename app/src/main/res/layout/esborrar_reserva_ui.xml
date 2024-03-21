@@ -21,9 +21,10 @@
 
     <EditText
             android:id="@+id/editTextDNI"
-            android:layout_width="match_parent"
+            android:layout_width="200dp"
             android:layout_height="wrap_content"
             android:textSize="25sp"
+            android:layout_marginLeft="90dp"
             android:hint="DNI"
             android:textColor="@color/white"
             android:textColorHint="@color/white"
@@ -31,31 +32,27 @@
             android:layout_marginTop="62dp"/>
 
     <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@id/editTextDNI"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="32dp">
+
+        <Button
+            android:id="@+id/buttonInici"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_below="@id/editTextDNI"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="32dp">
+            android:text="Inici"
+            android:textSize="30sp"
+            android:layout_marginRight="20dp"/>
 
         <Button
-                android:id="@+id/buttonInici"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Inici"
-                android:textSize="30sp"
-                android:background="#00ffcc"
-                android:layout_marginRight="20dp"
-                android:onClick="goToMainActivity"/>
-
-        <Button
-                android:id="@+id/buttonEsborrar"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Escorra"
-                android:textSize="30sp"
-                android:background="@drawable/button_background"
-                android:onClick="goToCrearReservaActivity"/>
+            android:id="@+id/buttonEsborrar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Esborra"
+            android:textSize="30sp"/>
 
     </LinearLayout>
 

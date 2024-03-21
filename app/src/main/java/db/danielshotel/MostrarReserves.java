@@ -7,12 +7,17 @@ import android.widget.ListView;
 import androidx.appcompat.app.AppCompatActivity;
 import java.util.ArrayList;
 
+import db.danielshotel.MainActivity;
+import db.danielshotel.R;
+import db.danielshotel.Reserva;
+import db.danielshotel.ReservaAdapter;
+
 public class MostrarReserves extends AppCompatActivity {
 
     private ListView listViewReserves;
-    private ArrayList<Reserva> reservesList;
-    private Button inici;
-
+    private ArrayList<Reserva> reserves;
+    private Button inici, mostrarRserves;
+    private ReservaAdapter adapter;
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -20,14 +25,19 @@ public class MostrarReserves extends AppCompatActivity {
 
         inici = findViewById(R.id.buttonInici);
         listViewReserves = findViewById(R.id.listViewReserves);
+        mostrarRserves = findViewById(R.id.buttonMostrarReserves);
 
-        reservesList = MainActivity.reserves;
+        reserves = MainActivity.reserves;
 
-        ReservaAdapter adapter = new ReservaAdapter(this, R.layout.reserva_item, reservesList);
+        // Configura l'adaptador per a la llista de reserves
+        adapter = new ReservaAdapter(this, R.layout.reserva_item, reserves);
         listViewReserves.setAdapter(adapter);
 
         inici.setOnClickListener(v -> inici());
+        mostrarRserves.setOnClickListener(v -> mostrarReserves());
 
+        // Mostra les reserves en la ListView
+        actualitzarReservesListView();
     }
 
     public void inici() {
@@ -35,4 +45,13 @@ public class MostrarReserves extends AppCompatActivity {
         startActivity(i);
     }
 
+    // Mostra les reserves per pantalla
+    private void mostrarReserves() {
+        // No és necessari fer res aquí, ja que les reserves ja s'estan mostrant a listViewReserves
+    }
+
+    // Actualitza les reserves a listViewReserves
+    private void actualitzarReservesListView() {
+        adapter.notifyDataSetChanged(); // Notifica al ListView que les dades han canviat
+    }
 }

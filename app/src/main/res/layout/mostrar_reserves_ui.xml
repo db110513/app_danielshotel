@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
@@ -8,36 +9,50 @@
         tools:context=".MostrarReserves">
 
     <TextView
-            android:id="@+id/textViewTitle"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Mostra Reserves"
-            android:textColor="@color/white"
-            android:textSize="46sp"
-            android:textStyle="bold"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="72dp"/>
+        android:id="@+id/textViewTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Mostra Reserves"
+        android:textColor="@color/white"
+        android:textSize="46sp"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="72dp"/>
 
     <ListView
-            android:id="@+id/listViewReserves"
-            android:layout_width="match_parent"
-            android:layout_height="370dp"
-            android:layout_below="@id/textViewTitle"
-            android:layout_marginTop="62dp"
-            android:textColor="@color/white"
-            android:divider="@null"
-            android:dividerHeight="0dp"/>
+        android:id="@+id/listViewReserves"
+        android:layout_width="match_parent"
+        android:layout_height="370dp"
+        android:layout_below="@id/textViewTitle"
+        android:layout_marginTop="62dp"
+        android:textColor="@color/white"
+        android:divider="@null"
+        android:dividerHeight="0dp"/>
 
-    <Button
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@id/listViewReserves"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="52dp">
+
+        <Button
             android:id="@+id/buttonInici"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Inici"
             android:textSize="30sp"
-            android:textColor="@color/white"
-            android:layout_below="@id/listViewReserves"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="32dp"/>
+            android:layout_marginRight="20dp"/>
+
+        <Button
+            android:id="@+id/buttonMostrarReserves"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Mostra"
+            android:textSize="30sp"/>
+
+    </LinearLayout>
 
 
 </RelativeLayout>
