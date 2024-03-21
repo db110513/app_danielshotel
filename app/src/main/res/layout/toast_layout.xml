@@ -3,16 +3,16 @@
         android:id="@+id/custom_toast_layout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:padding="16dp"
-        android:background="#FF4081"
+        android:padding="5dp"
+        android:background="@drawable/rounded_corners"
         android:orientation="vertical">
 
     <TextView
             android:id="@+id/textViewMessage"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textColor="#FFFFFF"
-            android:textSize="16sp"
+            android:textColor="#000"
+            android:textSize="26sp"
             android:text="Hello, this is a custom toast!"
             android:layout_gravity="center"/>
 

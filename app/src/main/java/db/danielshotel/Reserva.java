@@ -4,11 +4,11 @@ public class Reserva {
 
     private String DNI;
     private String nom;
-    private double preu;
+    private String preu;
     private String destinacio;
 
 
-    public Reserva(String DNI, String nom, double preu, String destinacio) {
+    public Reserva(String DNI, String nom, String preu, String destinacio) {
         this.DNI = DNI;
         this.nom = nom;
         this.preu = preu;
@@ -29,10 +29,10 @@ public class Reserva {
         this.nom = nom;
     }
 
-    public double getPreu() {
+    public String getPreu() {
         return preu;
     }
-    public void setPreu(double preu) {
+    public void setPreu(String preu) {
         this.preu = preu;
     }
 
