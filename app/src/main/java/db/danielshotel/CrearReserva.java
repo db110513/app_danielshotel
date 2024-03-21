@@ -1,5 +1,6 @@
 package db.danielshotel;
 
+
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
@@ -87,6 +88,9 @@ public class CrearReserva extends AppCompatActivity {
         toast.setDuration(Toast.LENGTH_LONG);
         toast.setView(layout);
         toast.show();
+
+        inici();
+
     }
 
 

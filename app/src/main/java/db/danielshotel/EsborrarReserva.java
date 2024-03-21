@@ -68,6 +68,8 @@ public class EsborrarReserva extends AppCompatActivity {
             toast.setDuration(Toast.LENGTH_LONG);
             toast.setView(layout);
             toast.show();
+
+            inici();
         }
 
         else {
@@ -82,6 +84,7 @@ public class EsborrarReserva extends AppCompatActivity {
             toast.setView(layout);
             toast.show();
         }
+
     }
 
     private void inici() {

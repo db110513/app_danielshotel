@@ -22,12 +22,6 @@
                 android:name=".EsborrarReserva"
                 android:exported="false" />
         <activity
-                android:name=".MostrarReservesActivity"
-                android:exported="false" />
-        <activity
-                android:name=".MostrarReservesActivity"
-                android:exported="false" />
-        <activity
                 android:name=".CrearReserva"
                 android:exported="false" />
         <activity

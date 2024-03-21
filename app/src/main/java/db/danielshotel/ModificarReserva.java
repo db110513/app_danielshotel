@@ -1,5 +1,6 @@
 package db.danielshotel;
 
+
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -11,7 +12,6 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
-
 
 
 public class ModificarReserva extends AppCompatActivity {
@@ -74,19 +74,19 @@ public class ModificarReserva extends AppCompatActivity {
         inflater = getLayoutInflater();
         layout = inflater.inflate(R.layout.toast_layout, findViewById(R.id.custom_toast));
         TextView text = layout.findViewById(R.id.textViewMessage);
-        text.setText("Reserva creada amb èxit");
+        text.setText("Reserva modificada correctament");
 
-        // Crear i mostrar el Toast personalitzat
         Toast toast = new Toast(getApplicationContext());
         toast.setDuration(Toast.LENGTH_LONG);
         toast.setView(layout);
         toast.show();
+
+        inici();
     }
 
 
 
     private void inici() {
-
         Intent i = new Intent(this, MainActivity.class);
         startActivity(i);
     }

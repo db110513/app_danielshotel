@@ -19,6 +19,7 @@ public class MostrarReserves extends AppCompatActivity {
     private Button inici, mostrarRserves;
     private ReservaAdapter adapter;
 
+
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.mostrar_reserves_ui);
@@ -47,7 +48,6 @@ public class MostrarReserves extends AppCompatActivity {
 
     // Mostra les reserves per pantalla
     private void mostrarReserves() {
-        // No és necessari fer res aquí, ja que les reserves ja s'estan mostrant a listViewReserves
     }
 
     // Actualitza les reserves a listViewReserves
