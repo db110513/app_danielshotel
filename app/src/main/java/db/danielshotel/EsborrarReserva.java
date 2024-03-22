@@ -3,6 +3,7 @@ package db.danielshotel;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.InputFilter;
 import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -24,6 +25,10 @@ public class EsborrarReserva extends AppCompatActivity {
         setContentView(R.layout.esborrar_reserva_ui);
 
         editTextDNI = findViewById(R.id.editTextDNI);
+
+        // obliga EditText a tindre 9 char
+        editTextDNI.setFilters(new InputFilter[] { new MaxLengthFilter(9) });
+
         buttonEsborrar = findViewById(R.id.buttonEsborrar);
         buttonInici = findViewById(R.id.buttonInici);
 
@@ -42,7 +47,7 @@ public class EsborrarReserva extends AppCompatActivity {
             layout = inflater.inflate(R.layout.toast_layout, findViewById(R.id.custom_toast));
 
             TextView text = layout.findViewById(R.id.textViewMessage);
-            text.setText("Omple el camp DNI");
+            text.setText("Escriu el DNI");
 
             Toast toast = new Toast(getApplicationContext());
             toast.setDuration(Toast.LENGTH_LONG);

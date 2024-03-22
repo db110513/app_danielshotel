@@ -26,11 +26,13 @@
             android:layout_width="260dp"
             android:layout_height="wrap_content"
             android:textSize="27dp"
+            android:background="@drawable/btn_background"
             android:text="Crea reserva"
             android:layout_below="@id/textViewWelcome"
             android:layout_centerHorizontal="true"
-            android:textColor="@color/white"
+            android:textColor="@color/black"
             android:layout_marginTop="76dp"/>
+
 
     <Button
             android:id="@+id/buttonMostrar"
@@ -40,30 +42,33 @@
             android:text="Mostra reserves"
             android:layout_below="@id/buttonCrearReserva"
             android:layout_centerHorizontal="true"
-            android:textColor="@color/white"
-            android:layout_marginTop="16dp"/>
+            android:background="@drawable/btn_background"
+            android:textColor="@color/black"
+            android:layout_marginTop="20dp"/>
 
     <Button
             android:id="@+id/buttonModificarReserva"
             android:layout_width="260dp"
             android:layout_height="wrap_content"
-            android:textColor="@color/white"
+            android:background="@drawable/btn_background"
+            android:textColor="@color/black"
             android:text="Modifica reserva"
             android:textSize="27dp"
             android:layout_below="@id/buttonMostrar"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="16dp"/>
+            android:layout_marginTop="20dp"/>
 
     <Button
             android:id="@+id/buttonEsborrarReserva"
             android:layout_width="260dp"
             android:layout_height="wrap_content"
-            android:textColor="@color/white"
+            android:background="@drawable/btn_background"
+            android:textColor="@color/black"
             android:text="Esborra reserva"
             android:textSize="27dp"
             android:layout_below="@id/buttonModificarReserva"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="16dp"/>
+            android:layout_marginTop="20dp"/>
 
     <Button
             android:id="@+id/buttonSortir"
@@ -71,10 +76,11 @@
             android:layout_height="wrap_content"
             android:textSize="27dp"
             android:text="Sortir"
-            android:textColor="@color/white"
+            android:background="@drawable/btn_background"
+            android:textColor="@color/black"
             android:layout_below="@id/buttonEsborrarReserva"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="16dp"/>
+            android:layout_marginTop="20dp"/>
 
 
 </RelativeLayout>

@@ -3,6 +3,7 @@ package db.danielshotel;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.InputFilter;
 import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -18,7 +19,6 @@ public class ModificarReserva extends AppCompatActivity {
 
     private EditText editTextDNI;
     private EditText editTextNom;
-    private EditText editTextPreu;
     private EditText editTextDestinacio;
     private Button buttonInici;
     private Button buttonModificarReserva;
@@ -29,9 +29,13 @@ public class ModificarReserva extends AppCompatActivity {
         setContentView(R.layout.modificar_reserva_ui);
 
 
-        editTextDNI = findViewById(R.id.editTextDNI);
+        editTextDNI = findViewById(R.id.editTextDNImodificat);
+
+        // obliga EditText a tindre 9 char
+        editTextDNI.setFilters(new InputFilter[] { new MaxLengthFilter(9) });
+
         editTextNom = findViewById(R.id.editTextNom);
-        editTextPreu = findViewById(R.id.editTextPreu);
+
         editTextDestinacio = findViewById(R.id.editTextDestinacio);
         buttonInici = findViewById(R.id.buttonInici);
         buttonModificarReserva = findViewById(R.id.buttonModificarReserva);
@@ -48,16 +52,15 @@ public class ModificarReserva extends AppCompatActivity {
 
         String DNI = editTextDNI.getText().toString();
         String nom = editTextNom.getText().toString();
-        String preu = editTextPreu.getText().toString();
         String destinacio = editTextDestinacio.getText().toString();
 
         // Verificar que els camps no estiguin buits
-        if (TextUtils.isEmpty(DNI) || TextUtils.isEmpty(nom) || TextUtils.isEmpty(preu) || TextUtils.isEmpty(destinacio)) {
+        if (TextUtils.isEmpty(DNI) || TextUtils.isEmpty(nom) || TextUtils.isEmpty(destinacio)) {
             inflater = getLayoutInflater();
             layout = inflater.inflate(R.layout.toast_layout, findViewById(R.id.custom_toast));
 
             TextView text = layout.findViewById(R.id.textViewMessage);
-            text.setText("Si us plau,\nomple tots els camps");
+            text.setText("Omple tots els camps");
 
             Toast toast = new Toast(getApplicationContext());
             toast.setDuration(Toast.LENGTH_LONG);
@@ -67,7 +70,7 @@ public class ModificarReserva extends AppCompatActivity {
             return;
         }
 
-        Reserva novaReserva = new Reserva(DNI, nom, preu, destinacio);
+        Reserva novaReserva = new Reserva(DNI, nom, destinacio);
         MainActivity.reserves.add(novaReserva);
 
         // Configurar el text del TextView en el disseny del Toast
@@ -83,7 +86,6 @@ public class ModificarReserva extends AppCompatActivity {
 
         inici();
     }
-
 
 
     private void inici() {

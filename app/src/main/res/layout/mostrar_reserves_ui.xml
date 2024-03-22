@@ -41,6 +41,7 @@
         android:id="@+id/buttonInici"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textColor="@color/black"
         android:text="Inici"
         android:textSize="30sp"
         android:layout_marginRight="20dp"/>
@@ -49,6 +50,7 @@
         android:id="@+id/buttonMostrarReserves"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textColor="@color/black"
         android:text="Mostra"
         android:textSize="30sp"/>
 

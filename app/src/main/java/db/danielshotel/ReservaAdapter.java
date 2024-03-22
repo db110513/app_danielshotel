@@ -45,7 +45,6 @@ public class ReservaAdapter extends ArrayAdapter<Reserva> {
         if (reserva != null) {
             textViewDNI.setText(reserva.getDNI());
             textViewNom.setText(reserva.getNom());
-            textViewPreu.setText(String.valueOf(reserva.getPreu()));
             textViewDestinacio.setText(reserva.getDestinacio());
         }
 

@@ -2,61 +2,46 @@ package db.danielshotel;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.widget.Button;
 import android.widget.ListView;
 import androidx.appcompat.app.AppCompatActivity;
 import java.util.ArrayList;
 
-import db.danielshotel.MainActivity;
-import db.danielshotel.R;
-import db.danielshotel.Reserva;
-import db.danielshotel.ReservaAdapter;
-
 public class MostrarReserves extends AppCompatActivity {
 
     private ListView listViewReserves;
     private ArrayList<Reserva> reserves;
-    private Button inici, mostrarRserves;
+    private Button inici, mostrarReservesButton;
     private ReservaAdapter adapter;
-
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.mostrar_reserves_ui);
 
-        Log.d("TAG", "***2");
-
         inici = findViewById(R.id.buttonInici);
         listViewReserves = findViewById(R.id.listViewReserves);
-        mostrarRserves = findViewById(R.id.buttonMostrarReserves);
+        mostrarReservesButton = findViewById(R.id.buttonMostrarReserves);
 
+        // Obtenim l'ArrayList de reserves de MainActivity
         reserves = MainActivity.reserves;
 
-        // Configura l'adaptador per a la llista de reserves
+        // adaptador amb les reserves vinculat al ListView
         adapter = new ReservaAdapter(this, R.layout.reserva_item, reserves);
         listViewReserves.setAdapter(adapter);
 
         inici.setOnClickListener(v -> inici());
-        mostrarRserves.setOnClickListener(v -> mostrarReserves());
-
-        // Mostra les reserves en la ListView
-        actualitzarReservesListView();
+        mostrarReservesButton.setOnClickListener(v -> mostrarReserves());
     }
 
+    // Navega a l'activitat MainActivity
     public void inici() {
         Intent i = new Intent(this, MainActivity.class);
         startActivity(i);
     }
 
-    // Mostra les reserves per pantalla
+    // Mostra les reserves en la ListView
     private void mostrarReserves() {
-        ReservaAdapter adapter = new ReservaAdapter(this, R.layout.reserva_item, reserves);
-        listViewReserves.setAdapter(adapter);
-    }
-
-    // Actualitza les reserves a listViewReserves
-    private void actualitzarReservesListView() {
-        adapter.notifyDataSetChanged(); // Notifica al ListView que les dades han canviat
+        // Actualitzem les dades de l'adaptador (per si han canviat des de l'última vegada)
+        adapter.notifyDataSetChanged();
     }
 }

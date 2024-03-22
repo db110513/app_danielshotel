@@ -4,14 +4,12 @@ public class Reserva {
 
     private String DNI;
     private String nom;
-    private String preu;
     private String destinacio;
 
 
-    public Reserva(String DNI, String nom, String preu, String destinacio) {
+    public Reserva(String DNI, String nom, String destinacio) {
         this.DNI = DNI;
         this.nom = nom;
-        this.preu = preu;
         this.destinacio = destinacio;
     }
 
@@ -27,13 +25,6 @@ public class Reserva {
     }
     public void setNom(String nom) {
         this.nom = nom;
-    }
-
-    public String getPreu() {
-        return preu;
-    }
-    public void setPreu(String preu) {
-        this.preu = preu;
     }
 
     public String getDestinacio() {
