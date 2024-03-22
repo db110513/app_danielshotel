@@ -6,51 +6,49 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.TextView;
-import java.util.ArrayList;
+import androidx.annotation.Nullable;
 
+
+import androidx.annotation.NonNull;
+
+import java.util.ArrayList;
 
 public class ReservaAdapter extends ArrayAdapter<Reserva> {
 
-    private Context context;
-    private int layoutResourceId;
-    private ArrayList<Reserva> reserves;
+    private Context mContext;
+    private int mResource;
 
-    public ReservaAdapter(Context context, int layoutResourceId, ArrayList<Reserva> reserves) {
-        super(context, layoutResourceId, reserves);
-        this.context = context;
-        this.layoutResourceId = layoutResourceId;
-        this.reserves = reserves;
+    public ReservaAdapter(Context context, int resource, ArrayList<Reserva> objects) {
+        super(context, resource, objects);
+        mContext = context;
+        mResource = resource;
     }
 
-    public View getView(int position, View convertView, ViewGroup parent) {
-        View row = convertView;
-        ReservaHolder holder;
-
-        if (row == null) {
-            LayoutInflater inflater = LayoutInflater.from(context);
-            row = inflater.inflate(layoutResourceId, parent, false);
-
-            holder = new ReservaHolder();
-            holder.textViewDNI = row.findViewById(R.id.textViewDNI);
-            holder.textViewNom = row.findViewById(R.id.textViewNom);
-            holder.textViewPreu = row.findViewById(R.id.textViewPreu);
-
-            row.setTag(holder);
-        } else {
-            holder = (ReservaHolder) row.getTag();
+    @NonNull
+    @Override
+    public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
+        if (convertView == null) {
+            LayoutInflater inflater = LayoutInflater.from(mContext);
+            convertView = inflater.inflate(mResource, parent, false);
         }
 
-        Reserva reserva = reserves.get(position);
-        holder.textViewDNI.setText(String.valueOf(reserva.getDNI()));
-        holder.textViewNom.setText(reserva.getNom());
-        holder.textViewPreu.setText(String.valueOf(reserva.getPreu()));
+        // Obtenir la reserva actual
+        Reserva reserva = getItem(position);
 
-        return row;
-    }
+        // Obté les referències als elements de la vista
+        TextView textViewDNI = convertView.findViewById(R.id.textViewDNI);
+        TextView textViewNom = convertView.findViewById(R.id.textViewNom);
+        TextView textViewPreu = convertView.findViewById(R.id.textViewPreu);
+        TextView textViewDestinacio = convertView.findViewById(R.id.textViewDestinacio);
 
-    static class ReservaHolder {
-        TextView textViewDNI;
-        TextView textViewNom;
-        TextView textViewPreu;
+        // Assigna les dades de la reserva als elements de la vista
+        if (reserva != null) {
+            textViewDNI.setText(reserva.getDNI());
+            textViewNom.setText(reserva.getNom());
+            textViewPreu.setText(String.valueOf(reserva.getPreu()));
+            textViewDestinacio.setText(reserva.getDestinacio());
+        }
+
+        return convertView;
     }
 }

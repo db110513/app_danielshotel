@@ -2,6 +2,7 @@ package db.danielshotel;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.Button;
 import android.widget.ListView;
 import androidx.appcompat.app.AppCompatActivity;
@@ -23,6 +24,8 @@ public class MostrarReserves extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.mostrar_reserves_ui);
+
+        Log.d("TAG", "***2");
 
         inici = findViewById(R.id.buttonInici);
         listViewReserves = findViewById(R.id.listViewReserves);
@@ -48,6 +51,8 @@ public class MostrarReserves extends AppCompatActivity {
 
     // Mostra les reserves per pantalla
     private void mostrarReserves() {
+        ReservaAdapter adapter = new ReservaAdapter(this, R.layout.reserva_item, reserves);
+        listViewReserves.setAdapter(adapter);
     }
 
     // Actualitza les reserves a listViewReserves
